@@ -1,0 +1,359 @@
+/* TODO:
+- Bajar e Instalar GITLAB
+- Estilizar con la paleta de colores
+- Normalizar el logo
+- Agregar las imágenes restantes
+- OPCIONAL: Agregar etiqueta de números a las barras del gráfico
+- Arregar la sección de testimonios
+- Agregar sección de beneficios
+- Agregar un título en la sección de Testimonios EJ: "Más de 300 empleados lo recomiendan"
+*/
+
+:root {
+  --primary: white;
+  --secondary: #edcd4f;
+  --terciary: #343463;
+  --darker: #121212;
+  --dark: black;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic);
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--primary);
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--terciary);
+  border: 2px solid var(--primary);
+}
+
+nav {
+  display: flex;
+  background-color: var(--terciary);
+  justify-content: space-between;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  padding-right: 20px;
+}
+
+ul > li {
+  padding: 0px 20px;
+}
+
+ul > li:last-child {
+  padding-right: 20px;
+}
+
+ul a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+header {
+  display: flex; /* Cambiar a "flex" */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(267deg, #5958a7, #343463);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 5.96rem;
+  color: var(--secondary);
+  text-shadow: 1px 2px 2px #000000;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+#queEs {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  background-color: var(--darker);
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  color: var(--primary);
+}
+
+#queEs > h2 {
+  text-align: center;
+}
+
+#queEs img {
+  width: 100%;
+}
+
+#queEs > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#queEs p {
+  width: 100%;
+  padding: 20px;
+}
+
+#descripcion {
+  display: block;
+}
+#descripcion p {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.zoom-without-container img {
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+.zoom-without-container img {
+  width: 50%;
+  height: auto;
+}
+.zoom-without-container img:hover {
+  transform: scale(1.1);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#ToF {
+  text-align: center;
+  padding: 20px;
+  height: 50%;
+  background: var(--secondary);
+}
+
+#ToF h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+#Rdo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#chart_div {
+  width: 50%;
+  height: 50%;
+}
+
+#Rdo div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#opiniones {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  background: var(--primary);
+  text-align: center;
+  padding: 4em 0;
+  overflow: scroll;
+}
+
+#opiniones h2 {
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--dark);
+}
+
+#opiniones .slides {
+  width: 100%;
+  left: 0;
+  padding-left: 0;
+  padding-top: 20px;
+  overflow: hidden;
+  list-style: none;
+  position: relative;
+  transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.slides li {
+  width: 25%;
+  position: relative;
+  float: left;
+}
+
+#opiniones li p {
+  margin-top: 0;
+}
+
+#opiniones li q {
+  max-width: 90%;
+  margin: auto;
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#opiniones li span.author {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--dark);
+  display: block;
+}
+
+.navigation {
+  display: block;
+  list-style: none;
+  text-align: center;
+  border: 40px;
+  position: absolute;
+  width: 104px;
+  left: 50%;
+  margin-left: -52px;
+}
+
+.navigation input {
+  display: none;
+}
+
+.navigation label {
+  float: left;
+  margin: 6px;
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: solid 2px var(--terciary);
+}
+
+#radio1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#radio2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+#radio1:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+.navigation label:hover {
+  cursor: pointer;
+}
+
+#radio1:checked ~ .navigation label#radioSelect1,
+#radio2:checked ~ .navigation label#radioSelect2,
+#radio3:checked ~ .navigation label#radioSelect3 {
+  background: var(--terciary);
+}
+
+@media screen and (max-width: 480px) {
+  #opiniones li p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  #opiniones li q {
+    font-size: 1em;
+  }
+  #opiniones h2 {
+    font-size: 20px;
+  }
+}
+
+footer {
+  background-color: var(--terciary);
+  text-align: center;
+  color: var(--primary);
+  padding: 20px 0;
+}
