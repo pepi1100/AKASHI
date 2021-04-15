@@ -17,7 +17,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="/img/Arbusta_s_Tech.png" />
     <!-- Place favicon.ico in the root directory -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -50,6 +50,7 @@
       </ul>
     </nav>
     <header id="header">
+      <img src="img/teclado.png" alt="teclado">
       <h1>A.K.A.S.H.I</h1>
     </header>
     <section id="queEs">
@@ -98,45 +99,30 @@
 
     <section id="opiniones">
       <h2>¿Que opinan los Arbusters (empleados)?</h2>
-      <hr />
-      <input type="radio" name="slides" id="radio1" checked />
-      <input type="radio" name="slides" id="radio2" />
-      <input type="radio" name="slides" id="radio3" />
-      <ul class="slides">
-        <li class="slide">
-          <p>
-            <q
-              >"Esta bueno, es cómodo. Siempre me manejé con teclados pero me
-              agrada que AKASHI sea más portatil"</q
-            >
-            <span class="author">Juan Perez</span>
-          </p>
-        </li>
-        <li class="slide">
-          <p>
-            <q
-              >"Al ser más ergonómico, con el teclado convencional es incómodo y
-              creo que si alguien empieza con éste teclado podría aumentar su
-              productividad"</q
-            >
-            <span class="author">Juan Perez</span>
-          </p>
-        </li>
-        <li class="slide">
-          <p>
-            <q
-              >"Pensé que me iba a llevar más tiempo adaptarme, pero es muy
-              sencillo de usar"</q
-            >
-            <span class="author">Juan Perez</span>
-          </p>
-        </li>
-      </ul>
-      <div class="navigation">
-        <label for="radio1" id="radioSelect1"></label>
-        <label for="radio2" id="radioSelect2"></label>
-        <label for="radio3" id="radioSelect3"></label>
-      </div>
+    <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <p>"Esta bueno, es cómodo. Siempre me manejé con teclados pero me agrada que AKASHI sea más portatil" -Jackelina</p>
+    </div>
+
+    <div class="mySlides fade">
+      <p>"Al ser más ergonómico, con el teclado convencional es incómodo y creo que si alguien empieza con éste teclado podría aumentar su productividad" -Sofía</p>
+    </div>
+
+    <div class="mySlides fade">
+      <p>"Pensé que me iba a llevar más tiempo adaptarme, pero es muy sencillo de usar" -Anahí</p>
+    </div>
+  </div>
+
+
+<!-- The dots/circles -->
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
     </section>
 
     <footer>
