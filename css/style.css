@@ -177,6 +177,10 @@ header img{
   width: 30%;
 }
 
+header div p {
+  color: white;
+}
+
 #queEs {
   display: flex;
   flex-flow: column;
